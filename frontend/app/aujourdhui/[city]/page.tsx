@@ -114,27 +114,46 @@ export default async function AujourdhuiPage({ params, searchParams }: PageProps
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-3 sm:py-4 lg:py-6">
-          <div className="mb-2 sm:mb-3 lg:mb-4">
-            <div className="flex items-start justify-between gap-2">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-3 sm:py-4 lg:py-4">
+          {/* Top row: Title and date */}
+          <div className="mb-2 sm:mb-3 lg:mb-3">
+            <div className="flex items-start justify-between gap-2 lg:items-center">
               <div className="flex-1 min-w-0">
                 <Link href="/" className="text-blue-600 hover:text-blue-800 text-xs sm:text-sm mb-1 sm:mb-2 inline-block">
                   ← Retour
                 </Link>
-                <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">{cityName}</h1>
-                <p className="text-gray-600 text-xs sm:text-sm mt-0.5 sm:mt-1">{selectedDateStr}</p>
+                <div className="flex items-baseline gap-3">
+                  <h1 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight">{cityName}</h1>
+                  <p className="text-gray-600 text-xs sm:text-sm hidden lg:block">{selectedDateStr}</p>
+                </div>
+                <p className="text-gray-600 text-xs sm:text-sm mt-0.5 sm:mt-1 lg:hidden">{selectedDateStr}</p>
               </div>
             </div>
           </div>
           
-          {/* Week selector - more compact on mobile */}
-          <div className="mb-2 sm:mb-3">
+          {/* Desktop: Week selector and search on same line */}
+          <div className="hidden lg:flex lg:items-center lg:gap-4 lg:mb-3">
+            <div className="flex-1">
+              <WeekSelector />
+            </div>
+            <div className="w-80">
+              <SearchBar />
+            </div>
+          </div>
+          
+          {/* Mobile: Week selector */}
+          <div className="mb-2 sm:mb-3 lg:hidden">
             <WeekSelector />
           </div>
           
-          {/* Search and Filters */}
-          <div className="space-y-2 sm:space-y-3">
+          {/* Mobile: Search and Filters */}
+          <div className="space-y-2 sm:space-y-3 lg:hidden">
             <SearchBar />
+            <MobileFilters resultCount={films.length} />
+          </div>
+          
+          {/* Desktop: Filters only */}
+          <div className="hidden lg:block">
             <MobileFilters resultCount={films.length} />
           </div>
         </div>

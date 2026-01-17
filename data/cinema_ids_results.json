@@ -1,0 +1,157 @@
+{
+  "found": [],
+  "not_found": [
+    {
+      "code": "L_ARCHIPEL",
+      "name": "L'Archipel"
+    },
+    {
+      "code": "L_ARLEQUIN",
+      "name": "L'Arlequin"
+    },
+    {
+      "code": "LE_BALZAC",
+      "name": "Le Balzac"
+    },
+    {
+      "code": "LE_BRADY",
+      "name": "Le Brady"
+    },
+    {
+      "code": "LE_CHAMPO",
+      "name": "Le Champo - Espace Jacques-Tati"
+    },
+    {
+      "code": "CHRISTINE_CINEMA_CLUB",
+      "name": "Christine Cinéma Club"
+    },
+    {
+      "code": "CINEMA_DU_PANTHEON",
+      "name": "Cinéma du Panthéon"
+    },
+    {
+      "code": "LE_MAC_MAHON",
+      "name": "Le Mac Mahon"
+    },
+    {
+      "code": "LA_CLEF",
+      "name": "La Clef"
+    },
+    {
+      "code": "DULAC_CINEMAS",
+      "name": "Dulac Cinémas"
+    },
+    {
+      "code": "ECOLES_CINEMA_CLUB",
+      "name": "Écoles Cinéma Club"
+    },
+    {
+      "code": "L_ENTREPOT",
+      "name": "L'Entrepôt"
+    },
+    {
+      "code": "L_EPEE_DE_BOIS",
+      "name": "L'Épée de bois"
+    },
+    {
+      "code": "L_ESCURIAL",
+      "name": "L'Escurial"
+    },
+    {
+      "code": "ESPACE_SAINT_MICHEL",
+      "name": "Espace Saint-Michel"
+    },
+    {
+      "code": "LA_FILMOTHEQUE_DU_QUARTIER_LATIN",
+      "name": "La Filmothèque du Quartier latin"
+    },
+    {
+      "code": "GRAND_ACTION",
+      "name": "Grand Action"
+    },
+    {
+      "code": "LE_LOUXOR",
+      "name": "Le Louxor"
+    },
+    {
+      "code": "LUCERNAIRE",
+      "name": "Lucernaire"
+    },
+    {
+      "code": "LUMINOR_HOTEL_DE_VILLE",
+      "name": "Luminor Hôtel de Ville"
+    },
+    {
+      "code": "MAJESTIC_BASTILLE",
+      "name": "Majestic Bastille"
+    },
+    {
+      "code": "MAJESTIC_PASSY",
+      "name": "Majestic Passy"
+    },
+    {
+      "code": "MAX_LINDER_PANORAMA",
+      "name": "Max Linder Panorama"
+    },
+    {
+      "code": "MISTRAL",
+      "name": "Mistral"
+    },
+    {
+      "code": "MK2_BASTILLE_BEAUMARCHAIS",
+      "name": "MK2 Bastille (côté Beaumarchais)"
+    },
+    {
+      "code": "MK2_BASTILLE_FAUBOURG_SAINT_ANTOINE",
+      "name": "MK2 Bastille (côté Faubourg Saint-Antoine)"
+    },
+    {
+      "code": "MK2_BEAUBOURG",
+      "name": "MK2 Beaubourg"
+    },
+    {
+      "code": "MK2_ODEON_SAINT_MICHEL",
+      "name": "MK2 Odéon (côté Saint-Michel)"
+    },
+    {
+      "code": "MK2_PARNASSE",
+      "name": "MK2 Parnasse"
+    },
+    {
+      "code": "NOUVEL_ODEON",
+      "name": "Nouvel Odéon"
+    },
+    {
+      "code": "LA_PAGODE",
+      "name": "La Pagode"
+    },
+    {
+      "code": "REFLET_MEDICIS",
+      "name": "Reflet Médicis"
+    },
+    {
+      "code": "SAINT_ANDRE_DES_ARTS",
+      "name": "Saint-André-des-Arts"
+    },
+    {
+      "code": "SEPT_PARNASSIENS",
+      "name": "Sept Parnassiens"
+    },
+    {
+      "code": "STUDIO_28",
+      "name": "Studio 28"
+    },
+    {
+      "code": "STUDIO_DES_URSULINES",
+      "name": "Studio des Ursulines"
+    },
+    {
+      "code": "STUDIO_GALANDE",
+      "name": "Studio Galande"
+    },
+    {
+      "code": "LES_3_LUXEMBOURG",
+      "name": "Les 3 Luxembourg"
+    }
+  ]
+}

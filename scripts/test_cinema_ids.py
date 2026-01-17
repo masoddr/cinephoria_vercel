@@ -100,10 +100,15 @@ def test_all_cinemas(city: str = None):
         logger.info("-" * 60)
         
         for cinema_code, cinema_info in city_cinemas.items():
-            total_cinemas += 1
-            cinema_id = cinema_info['id']
+            cinema_id = cinema_info.get('id')
             cinema_name = cinema_info['name']
             
+            # Skip cinemas without IDs
+            if not cinema_id:
+                logger.warning(f"⚠️ {cinema_name}: ID manquant (à trouver)")
+                continue
+            
+            total_cinemas += 1
             logger.info(f"Test: {cinema_name} (ID: {cinema_id})")
             
             if test_cinema_id(cinema_id, cinema_name, city_key):

@@ -72,7 +72,7 @@ export default function SearchBar({ placeholder = "Rechercher un film ou un cinÃ
         value={searchTerm}
         onChange={handleChange}
         placeholder={placeholder}
-        className="w-full px-4 py-3 pl-12 text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+        className="w-full px-4 py-2 lg:py-2.5 pl-12 text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-sm lg:text-base"
       />
       <div className="absolute inset-y-0 left-0 flex items-center pl-4">
         <svg
@@ -104,8 +104,13 @@ export default function SearchBar({ placeholder = "Rechercher un film ou un cinÃ
 
   return (
     <>
-      {/* Desktop: Full search bar */}
-      <div className="hidden md:block w-full max-w-2xl mx-auto">
+      {/* Desktop: Compact search bar */}
+      <div className="hidden lg:block w-full">
+        {searchInput}
+      </div>
+      
+      {/* Tablet: Full search bar */}
+      <div className="hidden md:block lg:hidden w-full max-w-2xl mx-auto">
         {searchInput}
       </div>
 

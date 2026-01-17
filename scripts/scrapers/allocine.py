@@ -356,6 +356,11 @@ class AllocineScraper(BaseScraper):
             if self._is_old_format():
                 logger.info("Format ancien détecté (Toulouse uniquement)")
                 for cinema_id, cinema_info in self.cinemas.items():
+                    # Skip cinemas without valid IDs
+                    if not cinema_info.get('id'):
+                        logger.warning(f"⚠️ Cinéma {cinema_info['name']} ignoré: ID manquant (à trouver avec find_cinema_id.py)")
+                        continue
+                    
                     logger.info(f"Récupération des séances pour {cinema_info['name']} (ID: {cinema_info['id']})")
                     cinema_seances = self.get_seances_cinema(
                         cinema_info['id'], 
@@ -383,6 +388,11 @@ class AllocineScraper(BaseScraper):
                     logger.info(f"Traitement de la ville: {city_key} ({len(city_cinemas)} cinémas)")
                     
                     for cinema_id, cinema_info in city_cinemas.items():
+                        # Skip cinemas without valid IDs
+                        if not cinema_info.get('id'):
+                            logger.warning(f"⚠️ Cinéma {cinema_info['name']} ignoré: ID manquant (à trouver avec find_cinema_id.py)")
+                            continue
+                        
                         logger.info(f"Récupération des séances pour {cinema_info['name']} (ID: {cinema_info['id']})")
                         cinema_seances = self.get_seances_cinema(
                             cinema_info['id'], 

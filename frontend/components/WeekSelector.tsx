@@ -69,7 +69,7 @@ export default function WeekSelector() {
   };
 
   return (
-    <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-1.5 sm:pb-2 -mx-2 px-2 scrollbar-hide">
+    <div className="flex gap-1.5 sm:gap-2 lg:gap-1.5 overflow-x-auto pb-1.5 sm:pb-2 lg:pb-0 -mx-2 px-2 lg:mx-0 lg:px-0 scrollbar-hide">
       {weekDates.map((date, index) => {
         const dayName = date.toLocaleDateString('fr-FR', { weekday: 'short' });
         const dayNumber = date.getDate();
@@ -81,17 +81,17 @@ export default function WeekSelector() {
           <button
             key={index}
             onClick={() => handleDateSelect(date)}
-            className={`flex-shrink-0 px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 md:py-2.5 rounded-lg text-center transition-all min-w-[44px] sm:min-w-[56px] ${
+            className={`flex-shrink-0 px-2 py-1.5 sm:px-3 sm:py-2 lg:px-2.5 lg:py-1.5 rounded-lg text-center transition-all min-w-[44px] sm:min-w-[56px] lg:min-w-[60px] ${
               selected
                 ? 'bg-blue-600 text-white shadow-md'
                 : 'bg-white border border-gray-300 text-gray-700 hover:border-blue-300 hover:bg-blue-50'
             } ${today && !selected ? 'border-blue-200 bg-blue-50' : ''}`}
           >
-            <div className="text-[10px] sm:text-xs md:text-sm font-semibold leading-tight">{dayName}</div>
-            <div className={`text-sm sm:text-base md:text-lg font-bold leading-tight ${selected ? 'text-white' : 'text-gray-900'}`}>
+            <div className="text-[10px] sm:text-xs lg:text-xs font-semibold leading-tight">{dayName}</div>
+            <div className={`text-sm sm:text-base lg:text-base font-bold leading-tight ${selected ? 'text-white' : 'text-gray-900'}`}>
               {dayNumber}
             </div>
-            <div className="hidden sm:block text-[10px] md:text-xs text-gray-500 leading-tight">{month}</div>
+            <div className="hidden sm:block lg:hidden text-[10px] md:text-xs text-gray-500 leading-tight">{month}</div>
           </button>
         );
       })}
