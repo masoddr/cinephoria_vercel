@@ -18,46 +18,48 @@ export default function FilmCard({ filmTitle, seances }: FilmCardProps) {
   const filmSlug = slugify(filmTitle);
 
   return (
-    <Link href={`/film/${filmSlug}`} className="block">
-      <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+    <Link href={`/film/${filmSlug}`} className="block group">
+      <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-soft overflow-hidden hover:shadow-soft-lg transition-all duration-300 cursor-pointer border border-slate-200/60 hover:border-primary-200/60 hover:-translate-y-1">
         {/* Poster */}
-      <div className="relative w-full h-36 sm:h-48 md:h-56 lg:h-64 bg-slate-200">
+      <div className="relative w-full h-36 sm:h-48 md:h-56 lg:h-64 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
         {firstSeance.poster && firstSeance.poster !== 'https://www.allocine.fr/skin/img/placeholder/poster.jpg' ? (
           <Image
             src={firstSeance.poster}
             alt={filmTitle}
             fill
-            className="object-cover"
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
             sizes="(max-width: 640px) 33vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, (max-width: 1280px) 20vw, 15vw"
             unoptimized // Allociné images may not support optimization
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-slate-300">
-            <span className="text-slate-500 text-sm">Affiche non disponible</span>
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-200 to-slate-300">
+            <span className="text-slate-500 text-sm font-medium">Affiche non disponible</span>
           </div>
         )}
+        {/* Gradient overlay on hover */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
 
       {/* Content */}
-      <div className="p-2 sm:p-3 md:p-4">
-        <h3 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-gray-900 mb-1.5 sm:mb-2 line-clamp-2">
+      <div className="p-3 sm:p-4">
+        <h3 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 mb-2 sm:mb-2.5 line-clamp-2 group-hover:text-primary-700 transition-colors duration-200">
           {filmTitle}
         </h3>
 
         {/* Film metadata */}
-        <div className="flex flex-wrap gap-1 sm:gap-1.5 md:gap-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           {firstSeance.version && (
-            <span className="px-1 sm:px-1.5 md:px-2 py-0.5 text-[9px] sm:text-[10px] md:text-xs font-semibold rounded bg-blue-100 text-blue-800">
+            <span className="px-2 py-1 text-[10px] sm:text-xs font-semibold rounded-lg bg-primary-50 text-primary-700 border border-primary-100">
               {firstSeance.version}
             </span>
           )}
           {firstSeance.duree && (
-            <span className="px-1 sm:px-1.5 md:px-2 py-0.5 text-[9px] sm:text-[10px] md:text-xs font-semibold rounded bg-gray-100 text-gray-800">
+            <span className="px-2 py-1 text-[10px] sm:text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 border border-slate-200">
               {formatDuration(firstSeance.duree)}
             </span>
           )}
           {firstSeance.note && (
-            <span className="px-1 sm:px-1.5 md:px-2 py-0.5 text-[9px] sm:text-[10px] md:text-xs font-semibold rounded bg-yellow-100 text-yellow-800">
+            <span className="px-2 py-1 text-[10px] sm:text-xs font-semibold rounded-lg bg-amber-50 text-amber-700 border border-amber-100">
               ⭐ {firstSeance.note.toFixed(1)}
             </span>
           )}

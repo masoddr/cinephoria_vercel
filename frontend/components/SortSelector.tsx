@@ -29,11 +29,11 @@ export default function SortSelector() {
 
   return (
     <div className="flex items-center gap-2 sm:gap-3">
-      <label className="text-xs sm:text-sm font-medium text-gray-700 whitespace-nowrap">Trier par :</label>
+      <label className="text-xs sm:text-sm font-medium text-slate-700 whitespace-nowrap">Trier par :</label>
       <select
         value={selectedSort}
         onChange={(e) => handleSortChange(e.target.value as SortOption)}
-        className="px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg border border-gray-300 bg-white text-xs sm:text-sm font-medium text-gray-700 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all flex-1 sm:flex-initial"
+        className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm text-xs sm:text-sm font-medium text-slate-700 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all duration-200 flex-1 sm:flex-initial shadow-sm hover:shadow-md cursor-pointer"
       >
         {sortOptions.map((option) => (
           <option key={option.value} value={option.value}>

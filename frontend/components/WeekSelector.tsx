@@ -81,17 +81,17 @@ export default function WeekSelector() {
           <button
             key={index}
             onClick={() => handleDateSelect(date)}
-            className={`flex-shrink-0 px-2 py-1.5 sm:px-3 sm:py-2 lg:px-2.5 lg:py-1.5 rounded-lg text-center transition-all min-w-[44px] sm:min-w-[56px] lg:min-w-[60px] ${
+            className={`flex-shrink-0 px-2.5 py-2 sm:px-3 sm:py-2.5 lg:px-3 lg:py-2 rounded-xl text-center transition-all duration-200 min-w-[50px] sm:min-w-[60px] lg:min-w-[64px] ${
               selected
-                ? 'bg-blue-600 text-white shadow-md'
-                : 'bg-white border border-gray-300 text-gray-700 hover:border-blue-300 hover:bg-blue-50'
-            } ${today && !selected ? 'border-blue-200 bg-blue-50' : ''}`}
+                ? 'bg-primary-600 text-white shadow-md shadow-primary-500/30 hover:bg-primary-700'
+                : 'bg-white/80 backdrop-blur-sm border border-slate-200 text-slate-700 hover:border-primary-300 hover:bg-primary-50/50'
+            } ${today && !selected ? 'border-primary-200 bg-primary-50/50' : ''}`}
           >
             <div className="text-[10px] sm:text-xs lg:text-xs font-semibold leading-tight">{dayName}</div>
-            <div className={`text-sm sm:text-base lg:text-base font-bold leading-tight ${selected ? 'text-white' : 'text-gray-900'}`}>
+            <div className={`text-sm sm:text-base lg:text-base font-bold leading-tight ${selected ? 'text-white' : 'text-slate-900'}`}>
               {dayNumber}
             </div>
-            <div className="hidden sm:block lg:hidden text-[10px] md:text-xs text-gray-500 leading-tight">{month}</div>
+            <div className="hidden sm:block lg:hidden text-[10px] md:text-xs text-slate-500 leading-tight">{month}</div>
           </button>
         );
       })}
