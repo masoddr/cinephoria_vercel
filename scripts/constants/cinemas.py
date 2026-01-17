@@ -35,24 +35,24 @@ CINEMAS = {
             'name': 'Pathé Beaugrenelle',
             'district': '15e arrondissement'
         },
-        # Cinémas indépendants de Paris - IDs à trouver (utiliser find_cinema_id.py)
+        # Cinémas indépendants de Paris
         'L_ARCHIPEL': {
-            'id': None,  # À trouver
+            'id': 'C0134',
             'name': "L'Archipel",
             'district': 'Paris'
         },
         'L_ARLEQUIN': {
-            'id': None,  # À trouver
+            'id': 'C0054',
             'name': "L'Arlequin",
             'district': 'Paris'
         },
         'LE_BALZAC': {
-            'id': None,  # À trouver
+            'id': 'C0009',
             'name': 'Le Balzac',
             'district': 'Paris'
         },
         'LE_BRADY': {
-            'id': None,  # À trouver
+            'id': 'C0023',
             'name': 'Le Brady',
             'district': 'Paris'
         },
@@ -62,12 +62,12 @@ CINEMAS = {
             'district': 'Paris'
         },
         'CHRISTINE_CINEMA_CLUB': {
-            'id': None,  # À trouver
+            'id': 'C0015',
             'name': 'Christine Cinéma Club',
             'district': 'Paris'
         },
         'CINEMA_DU_PANTHEON': {
-            'id': None,  # À trouver
+            'id': 'C0076',
             'name': 'Cinéma du Panthéon',
             'district': 'Paris'
         },
@@ -87,22 +87,22 @@ CINEMAS = {
             'district': 'Paris'
         },
         'ECOLES_CINEMA_CLUB': {
-            'id': None,  # À trouver
+            'id': 'C0071',
             'name': 'Écoles Cinéma Club',
             'district': 'Paris'
         },
         'L_ENTREPOT': {
-            'id': None,  # À trouver
+            'id': 'C0005',
             'name': "L'Entrepôt",
             'district': 'Paris'
         },
         'L_EPEE_DE_BOIS': {
-            'id': None,  # À trouver
+            'id': 'W7504',
             'name': "L'Épée de bois",
             'district': 'Paris'
         },
         'L_ESCURIAL': {
-            'id': None,  # À trouver
+            'id': 'C0147',
             'name': "L'Escurial",
             'district': 'Paris'
         },
@@ -117,37 +117,37 @@ CINEMAS = {
             'district': 'Paris'
         },
         'GRAND_ACTION': {
-            'id': None,  # À trouver
+            'id': 'C0072',
             'name': 'Grand Action',
             'district': 'Paris'
         },
         'LE_LOUXOR': {
-            'id': None,  # À trouver
+            'id': 'W7510',
             'name': 'Le Louxor',
             'district': 'Paris'
         },
         'LUCERNAIRE': {
-            'id': None,  # À trouver
+            'id': 'C0093',
             'name': 'Lucernaire',
             'district': 'Paris'
         },
         'LUMINOR_HOTEL_DE_VILLE': {
-            'id': None,  # À trouver
+            'id': 'C0013',
             'name': 'Luminor Hôtel de Ville',
             'district': 'Paris'
         },
         'MAJESTIC_BASTILLE': {
-            'id': None,  # À trouver
+            'id': 'C0139',
             'name': 'Majestic Bastille',
             'district': 'Paris'
         },
         'MAJESTIC_PASSY': {
-            'id': None,  # À trouver
+            'id': 'C0120',
             'name': 'Majestic Passy',
             'district': 'Paris'
         },
         'MAX_LINDER_PANORAMA': {
-            'id': None,  # À trouver
+            'id': 'C0089',
             'name': 'Max Linder Panorama',
             'district': 'Paris'
         },
@@ -182,7 +182,7 @@ CINEMAS = {
             'district': 'Paris'
         },
         'NOUVEL_ODEON': {
-            'id': None,  # À trouver
+            'id': 'C0041',
             'name': 'Nouvel Odéon',
             'district': 'Paris'
         },
@@ -192,38 +192,63 @@ CINEMAS = {
             'district': 'Paris'
         },
         'REFLET_MEDICIS': {
-            'id': None,  # À trouver
+            'id': 'C0074',
             'name': 'Reflet Médicis',
             'district': 'Paris'
         },
         'SAINT_ANDRE_DES_ARTS': {
-            'id': None,  # À trouver
+            'id': 'C0100',
             'name': 'Saint-André-des-Arts',
             'district': 'Paris'
         },
         'SEPT_PARNASSIENS': {
-            'id': None,  # À trouver
+            'id': 'C0025',
             'name': 'Sept Parnassiens',
             'district': 'Paris'
         },
         'STUDIO_28': {
-            'id': None,  # À trouver
+            'id': 'C0061',
             'name': 'Studio 28',
             'district': 'Paris'
         },
         'STUDIO_DES_URSULINES': {
-            'id': None,  # À trouver
+            'id': 'C0083',
             'name': 'Studio des Ursulines',
             'district': 'Paris'
         },
         'STUDIO_GALANDE': {
-            'id': None,  # À trouver
+            'id': 'C0016',
             'name': 'Studio Galande',
             'district': 'Paris'
         },
         'LES_3_LUXEMBOURG': {
-            'id': None,  # À trouver
+            'id': 'C0095',
             'name': 'Les 3 Luxembourg',
+            'district': 'Paris'
+        },
+        'JEU_DE_PAUME': {
+            'id': 'W7588',
+            'name': 'Jeu de Paume',
+            'district': 'Paris'
+        },
+        'LES_ELYSEES_LINCOLN': {
+            'id': 'C0108',
+            'name': 'Les Elysées Lincoln',
+            'district': 'Paris'
+        },
+        'CINEMA_DES_CINEASTES': {
+            'id': 'C0004',
+            'name': 'Cinéma des Cinéastes',
+            'district': 'Paris'
+        },
+        'CLUB_DE_L_ETOILE': {
+            'id': 'W7517',
+            'name': "Club de l'Étoile",
+            'district': 'Paris'
+        },
+        'LES_5_CAUMARTIN': {
+            'id': 'C0012',
+            'name': 'Les 5 Caumartin',
             'district': 'Paris'
         },
         # IDs à trouver/corriger (utiliser find_cinema_id.py)
