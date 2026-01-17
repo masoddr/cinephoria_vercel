@@ -2,6 +2,9 @@
  * Utilities for loading and filtering seances data
  */
 
+import { readFile } from 'fs/promises';
+import { join } from 'path';
+
 export interface Seance {
   titre: string;
   heure: string;
@@ -24,9 +27,6 @@ export interface SeancesData {
   cities: string[];
   seances: Seance[];
 }
-
-import { readFile } from 'fs/promises';
-import { join } from 'path';
 
 /**
  * Load seances data from JSON file
