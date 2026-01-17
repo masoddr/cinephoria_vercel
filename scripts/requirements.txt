@@ -1,0 +1,11 @@
+# Scraping
+beautifulsoup4==4.12.3
+requests==2.31.0
+scrapy==2.11.1
+
+# Utilitaires
+python-dotenv==1.0.1
+
+#Api
+allocine-seances==0.0.12 
+

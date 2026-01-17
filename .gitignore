@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Data files
+data/seances_cache.json
+data/tmdb_cache.json
+frontend/public/seances.json
+
+# Logs
+*.log
+/var/log/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+frontend/.next/
+frontend/out/
+frontend/.vercel
+
+# Environment
+.env
+.env.local
+.env*.local
