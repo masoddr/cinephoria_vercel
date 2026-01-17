@@ -7,6 +7,7 @@ import SearchBar from '@/components/SearchBar';
 import MobileFilters from '@/components/MobileFilters';
 import WeekSelector from '@/components/WeekSelector';
 import { LanguageFilter } from '@/lib/filters';
+import { ViewMode } from '@/components/ViewToggle';
 import Link from 'next/link';
 
 interface PageProps {
